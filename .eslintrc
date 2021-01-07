@@ -3,19 +3,16 @@
   "env": {
     "browser": true,
     "commonjs": true,
-    "es6": true,
+    "es6": true
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-  ],
+  "plugins": ["react", "react-hooks"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "parserOptions": {
     "sourceType": "module",
@@ -34,20 +31,17 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/*.tsx"
-      ],
+      "files": ["**/*.tsx"],
       "rules": {
         "react/prop-types": "off"
       }
     }
   ],
   "rules": {
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
+    "linebreak-style": ["error", "unix"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }

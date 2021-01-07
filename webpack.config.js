@@ -29,12 +29,20 @@ module.exports = {
       {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        loader: 'babel-loader',
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|eot|ttf|woff|woff2)$/i,
+        loader: 'file-loader',
         exclude: /node_modules/,
-        use: ['file-loader'],
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        loader: '@svgr/webpack',
       },
     ],
   },

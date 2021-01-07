@@ -18,6 +18,7 @@ module.exports = {
     '^@components/(.*)$': '<rootDir>/src/components/$1',
     '^@helpers/(.*)$': '<rootDir>/src/helpers/$1',
     '^@assets/(.*)$': '<rootDir>/src/assets/$1',
+    '^@configs/(.*)$': '<rootDir>/src/configs/$1',
     '^app$': '<rootDir>/src/app.tsx',
     '^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },

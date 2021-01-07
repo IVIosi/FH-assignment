@@ -9,9 +9,13 @@
       }
     ],
     "@babel/preset-typescript",
-    "@babel/preset-react",
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic",
+        "importSource": "@emotion/react"
+      }
+    ]
   ],
-  "plugins": [
-    "@babel/proposal-object-rest-spread"
-  ]
+  "plugins": ["@emotion/babel-plugin", "@babel/proposal-object-rest-spread"]
 }

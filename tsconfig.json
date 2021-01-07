@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5", // Specify ECMAScript target version
+    "target": "esnext", // Specify ECMAScript target version
     "lib": ["dom", "dom.iterable", "esnext"], // List of library files to be included in the compilation
     "allowJs": true, // Allow JavaScript files to be compiled
     "skipLibCheck": true, // Skip type checking of all declaration files
@@ -12,7 +12,8 @@
     "moduleResolution": "node", // Resolve modules using Node.js style
     "resolveJsonModule": true, // Include modules imported with .json extension
     "noEmit": true, // Don't emit; allow Babel to transform files.
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "sourceMap": true, // Generate corrresponding .map file
     "declaration": true, // Generate corresponding .d.ts file
     "noUnusedLocals": true, // Report errors on unused locals
@@ -26,7 +27,8 @@
     "paths": {
       "@components/*": ["components/*"],
       "@helpers/*": ["helpers/*"],
-      "@assets/*": ["assets/*"]
+      "@assets/*": ["assets/*"],
+      "@configs/*": ["configs/*"]
     }
   },
   "include": [
