@@ -1,6 +1,12 @@
-const themeConfigs = {
+import { Theme } from '@emotion/react';
+
+const themeConfigs: Theme = {
   defaultSpacing: 8,
   palette: {
+    common: {
+      black: '#000000',
+      white: '#ffffff',
+    },
     primary: '#0077ff',
     secondary: '#4398fa',
     text: {
