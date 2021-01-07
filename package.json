@@ -11,6 +11,17 @@
   },
   "author": "Mostafa Sameti",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
   "dependencies": {
     "i18next": "^19.6.0",
     "i18next-browser-languagedetector": "^5.0.0",
