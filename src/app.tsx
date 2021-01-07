@@ -7,6 +7,7 @@ import { storeConfigs, themeConfigs } from '@configs/index';
 import '@configs/i18n-configs';
 import Header from '@components/header';
 import Filters from '@components/filters';
+import NightlyPriceSlider from '@components/nightly-price-slider';
 
 const store = storeConfigs();
 
@@ -17,6 +18,7 @@ const App: FC = () => {
         <Global styles={globalStyles} />
         <Header />
         <Filters />
+        <NightlyPriceSlider />
       </ThemeProvider>
     </Provider>
   );
