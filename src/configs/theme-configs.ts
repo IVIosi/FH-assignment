@@ -1,4 +1,5 @@
 const themeConfigs = {
+  defaultSpacing: 8,
   palette: {
     primary: '#0077ff',
     secondary: '#4398fa',
@@ -11,6 +12,10 @@ const themeConfigs = {
       box: '#fefeff',
     },
   },
+  spacing: function (step: number): number {
+    return step * this.defaultSpacing;
+  },
+  fade: (color: string, alpha: number): string => `rgba(${color}, ${alpha})`,
 };
 
 export default themeConfigs;
