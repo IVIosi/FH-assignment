@@ -3,12 +3,13 @@ import { Interpolation, Theme } from '@emotion/react';
 const styles: { [className: string]: Interpolation<Theme> } = {
   filterSection: {
     height: '96px',
-    borderTop: '1px solid rgba(0, 44, 97, 0.05)',
-    borderBottom: '1px solid rgba(0, 44, 97, 0.05)',
+    borderTop: '1px solid #e4e8ef',
+    borderBottom: '1px solid #e4e8ef',
     backgroundColor: 'rgba(254, 254, 255, 0.95)',
   },
   sectionTitle: (theme) => ({
     fontSize: '10px',
+    lineHeight: '14px',
     color: theme.palette.text.secondary,
     textAlign: 'center',
   }),
