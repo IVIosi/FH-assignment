@@ -15,9 +15,7 @@ const styles: { [className: string]: Interpolation<Theme> } = {
   }),
   optionCarousel: {
     display: 'flex',
-    listStyle: 'none',
     margin: '10px 0',
-    padding: '0',
     overflow: 'scroll',
   },
   filterOption: (theme) => ({
@@ -40,6 +38,7 @@ const styles: { [className: string]: Interpolation<Theme> } = {
     border: `2px solid #bed2e9`,
     width: '40px',
     height: '40px',
+    boxSizing: 'content-box',
   },
   filterName: (theme) => ({
     position: 'absolute',
