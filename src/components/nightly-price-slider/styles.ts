@@ -2,7 +2,7 @@ import { Interpolation, Theme } from '@emotion/react';
 
 const styles: { [className: string]: Interpolation<Theme> } = {
   nightlyPriceSlider: (theme) => ({
-    height: '84px',
+    height: '64px',
     padding: theme.spacing(2),
     backgroundColor: 'rgba(254, 254, 255, 0.95)',
   }),
