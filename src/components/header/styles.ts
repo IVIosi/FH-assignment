@@ -17,7 +17,7 @@ const styles: { [className: string]: Interpolation<Theme> } = {
     height: theme.spacing(3),
     borderRadius: '50%',
     cursor: 'pointer',
-    '&: hover': {
+    '&:hover': {
       backgroundColor: 'rgba(0, 0, 0, 0.1)',
     },
   }),

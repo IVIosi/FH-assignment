@@ -27,7 +27,7 @@ const styles: { [className: string]: Interpolation<Theme> } = {
     outline: 'none',
     opacity: '0.7',
     transition: 'opacity .2s',
-    '&: hover': {
+    '&:hover': {
       opacity: 1,
     },
     '&::-webkit-slider-thumb': {
