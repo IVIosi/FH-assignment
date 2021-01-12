@@ -1,7 +1,7 @@
 import { Interpolation, Theme } from '@emotion/react';
 
 const styles: { [className: string]: Interpolation<Theme> } = {
-  roomList: (theme) => ({ padding: theme.spacing(2) }),
+  roomList: (theme) => ({ padding: theme.spacing(2), minHeight: 'calc(100vh - 297px)' }),
   roomCard: (theme) => ({
     display: 'flex',
     position: 'relative',
@@ -32,7 +32,7 @@ const styles: { [className: string]: Interpolation<Theme> } = {
   roomSummaryBox: {},
   roomOfferList: (theme) => ({
     overflow: 'hidden',
-    height: '156px',
+    maxHeight: '156px',
     padding: theme.spacing(1),
     '& > :not(:last-child)': {
       borderBottom: '1px solid #dae9fa',
