@@ -10,6 +10,7 @@ import Header from '@components/header';
 import Filters from '@components/filters';
 import NightlyPriceSlider from '@components/nightly-price-slider';
 import Rooms from '@components/rooms';
+import RoomBasket from '@components/basket';
 
 const store = storeConfigs();
 
@@ -19,9 +20,12 @@ const App: FC = () => {
       <ThemeProvider theme={themeConfigs}>
         <Global styles={[globalStyles, resetStyles]} />
         <Header />
-        <Filters />
-        <NightlyPriceSlider />
-        <Rooms />
+        <main>
+          <Filters />
+          <NightlyPriceSlider />
+          <Rooms />
+          <RoomBasket />
+        </main>
       </ThemeProvider>
     </Provider>
   );
