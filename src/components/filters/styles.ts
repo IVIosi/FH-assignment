@@ -27,10 +27,18 @@ const styles: { [className: string]: Interpolation<Theme> } = {
     backgroundColor: theme.palette.background.default,
     '&:hover': {
       color: theme.palette.background.default,
+      opacity: 0.7,
       '& div': {
         backgroundColor: theme.palette.secondary,
         border: `2px solid ${theme.palette.primary}`,
       },
+    },
+  }),
+  filterOptionSelected: (theme) => ({
+    color: theme.palette.background.default,
+    '& div': {
+      backgroundColor: theme.palette.secondary,
+      border: `2px solid ${theme.palette.primary}`,
     },
   }),
   filterIcon: {
