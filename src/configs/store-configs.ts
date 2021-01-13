@@ -1,18 +1,17 @@
-import { createStore, combineReducers, Store } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { filtersReducer } from '@components/filters/reducers';
+import { nightlyPriceReducer } from '@components/nightly-price-slider/reducers';
 
 const rootReducer = combineReducers({
   filters: filtersReducer,
+  nightlyPrice: nightlyPriceReducer,
 });
 
 export type AppState = ReturnType<typeof rootReducer>;
 
-const storeConfigs = (): Store => {
-  const store = createStore(rootReducer, composeWithDevTools());
-  return store;
-};
+const store = createStore(rootReducer, composeWithDevTools());
 
-export default storeConfigs;
+export default store;

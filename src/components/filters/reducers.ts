@@ -1,8 +1,7 @@
-import { FiltersState, FiltersActionTypes, SET_SELECTED_FILTERS, SET_MAX_PRICE } from './types';
+import { FiltersState, FiltersActionTypes, SET_SELECTED_FILTERS } from './types';
 
 const initialState: FiltersState = {
   selectedFilters: [],
-  maxPrice: 500,
 };
 
 export function filtersReducer(state = initialState, action: FiltersActionTypes): FiltersState {
@@ -11,11 +10,6 @@ export function filtersReducer(state = initialState, action: FiltersActionTypes)
       return {
         ...state,
         selectedFilters: action.payload,
-      };
-    case SET_MAX_PRICE:
-      return {
-        ...state,
-        maxPrice: action.payload,
       };
     default:
       return state;

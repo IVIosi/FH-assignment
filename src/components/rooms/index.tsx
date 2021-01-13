@@ -13,11 +13,13 @@ const dealsLength = 1;
 
 const Rooms: FC = () => {
   const filters = useSelector((store) => store.filters.selectedFilters);
-  const maxPrice = useSelector((store) => store.filters.maxPrice);
+  const maxPrice = useSelector((store) => store.nightlyPrice.maxPrice);
 
   const filteredRooms = MockData.results[0].offers.filter((room) => {
+    const isInPriceRange = getRoomPrice(room.rateBreakdown, true) < maxPrice;
+
     if (filters.length === 0) {
-      return true;
+      return isInPriceRange;
     }
 
     const roomOptions = {
@@ -28,8 +30,6 @@ const Rooms: FC = () => {
       nonSmoking:
         room.roomName.includes('Non Smoking') || room.roomName.includes('Non-Smoking') || false,
     };
-
-    const isInPriceRange = getRoomPrice(room.rateBreakdown, true) < maxPrice;
 
     return filters.reduce((res, current) => {
       return res && roomOptions[current];
